@@ -12,7 +12,14 @@ const connect = function() {
   conn.setEncoding('utf8'); 
   conn.on('connect', () => {
     console.log('GAME STARTED SNEK INBOUND!')
-    console.log('NAME:LMB ');
+    console.log('NAME: LMB');
+    // conn.write('Move: up');
+    // conn.write('Move: down')
+    // conn.write('Move: left');
+    // conn.write('Move: down');
+
+
+
   });
   conn.on('data', (data) => {
     console.log('Server says: ', data);
