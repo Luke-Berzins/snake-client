@@ -19,6 +19,15 @@ const setupInput = function(conn) {
     if (key === 'd' || key === 'D') {
       conn.write('Move: right');
     }
+    if (key === 't' || key === 'T') {
+      conn.write('Say: out me way!');
+    }
+    if (key === 'Y' || key === 'y') {
+      conn.write('Say: I AM A SNAKE WHO CARES BRO');
+    }
+    if (key === 'u' || key === 'U') {
+      conn.write('Say: sneaky snek');
+    }
     if (key === '\u0003') {
       process.exit();
     }

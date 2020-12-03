@@ -1,14 +1,13 @@
 const net = require('net');
-const { setupInput } = require('./input');
-
+const { IP, PORT } = require('./constants');
 /**
  * Establishes connection with the game server
  */
 
 const connect = function() {
   const conn = net.createConnection({ 
-    host: 'localhost',
-    port: 50541
+    host: IP,
+    port: PORT
   });
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
@@ -16,9 +15,11 @@ const connect = function() {
   conn.on('connect', () => {
     console.log('GAME STARTED SNEK INBOUND!')
     console.log('NAME: LMB');
+    console.log('Press t, y or u to talk, ya long bodied freak');
   });
   conn.on('data', (data) => {
     console.log('Server says: ', data);
+
   });
  
 
