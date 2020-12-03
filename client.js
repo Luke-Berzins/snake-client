@@ -1,4 +1,5 @@
 const net = require('net');
+const { setupInput } = require('./input');
 
 /**
  * Establishes connection with the game server
@@ -15,13 +16,6 @@ const connect = function() {
   conn.on('connect', () => {
     console.log('GAME STARTED SNEK INBOUND!')
     console.log('NAME: LMB');
-    // conn.write('Move: up');
-    // conn.write('Move: down')
-    // conn.write('Move: left');
-    // conn.write('Move: down');
-
-
-
   });
   conn.on('data', (data) => {
     console.log('Server says: ', data);
