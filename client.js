@@ -3,6 +3,7 @@ const net = require('net');
 /**
  * Establishes connection with the game server
  */
+
 const connect = function() {
   const conn = net.createConnection({ 
     host: 'localhost',
@@ -10,6 +11,7 @@ const connect = function() {
   });
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
+  // actions on connection
   conn.on('connect', () => {
     console.log('GAME STARTED SNEK INBOUND!')
     console.log('NAME: LMB');
